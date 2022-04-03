@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Responsive Travel Agency Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/82e435db88.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="uplbody">
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <i class="fas fa-paper-plane"></i> travelMore
+      </a>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-moon" id="theme-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+
+      <nav class="navbar">
+        <a href="./index.html#home">home</a>
+        <a href="./index.html#packages">hotels</a>
+        <a href="./index.html#services">services</a>
+        <a href="./index.html#pricing">pricing</a>
+        <a href="./index.html#review">review</a>
+        <a href="./index.html#contact">contact</a>
+        <a href="./index.html#blogs">blogs</a>
+      </nav>
+      <form action="" class="login-form" id="logForm">
+        <div id="regLog">
+          <div class="inputBox">
+            <span>email</span>
+            <input type="text" id="loginEmail" placeholder="enter your email" />
+          </div>
+
+          <div class="inputBox">
+            <span>password</span>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="enter your password"
+            />
+          </div>
+        </div>
+
+        <div class="remember" id="remember">
+          <div>
+            <input type="checkbox" name="" id="login-remember" />
+            <label for="login-remember">remember me</label>
+          </div>
+          <label id="regLogLabel">Register</label>
+        </div>
+
+        <span id="authBtn" class="btn">login</span>
+      </form>
+    </header>
+
+    <section id="uplsec" class="allinps">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Name of hotel" />
+      </div>
+      <div>
+        <label for="text">Text</label>
+        <textarea id="text" placeholder="Hotel description"></textarea>
+      </div>
+      <div>
+        <label for="imageUpload">Main image</label>
+        <input type="file" id="imageUpload" />
+      </div>
+      <div class="pridiv">
+        <label for="price">Price</label>
+        <input type="text" id="price" placeholder="Current price" />
+        <input type="text" id="oldprice" placeholder="Old price" />
+      </div>
+      <div>
+        <label for="location">Location</label>
+        <input type="text" id="location" placeholder="Hotel location" />
+      </div>
+      <button class="btn btn-success" id="addBtn">Add</button>
+    </section>
+    <section id="display"></section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+    <script src="sweetalert2.all.min.js"></script>
+
+    <script src="./js/firebase.js"></script>
+
+    <script src="./js/script.js"></script>
+
+    <script src="./js/authorization.js"></script>
+
+    <script src="./js/upload.js"></script>
+    <script>
+      logcheck();
+      ismanager();
+    </script>
+  </body>
+</html>
